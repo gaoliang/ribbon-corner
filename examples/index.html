@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribben corner Example</title>
+    <style>
+        * {
+            font-family: PingFangSC-Regular, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../dist/ribbon-corner.js"></script>
+    <script>
+        RibbonCorner.ribbenCorner({
+            backgroundColor: '#67C23A',
+            horizontalAlign: 'left',
+            toCorner: 200,
+            height: 120,
+            text: 'At Left',
+        });
+        RibbonCorner.ribbenCorner({
+            backgroundColor: '#E6A23C',
+            horizontalAlign: 'right',
+            text: 'At Right',
+        });
+    </script>
+</body>
+
+</html>
