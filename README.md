@@ -2,7 +2,7 @@
 Add a ribbon in the corner of your website.
 
 ## Screenshot
-![screenshot](./docs/screenshot.jpg)
+![screenshot](https://raw.githubusercontent.com/gaoliang/ribbon-corner/main/docs/screenshot.jpg)
 
 
 ## Getting started
