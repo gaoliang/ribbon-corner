@@ -1,6 +1,8 @@
 # ribbon-corner
 Add a ribbon in the corner of your website.
 
+[![Build Status](https://travis-ci.com/gaoliang/ribbon-corner.svg?branch=main)](https://travis-ci.com/gaoliang/ribbon-corner) [![npm version](https://badge.fury.io/js/ribbon-corner.svg)](https://badge.fury.io/js/ribbon-corner) [![Dependencies](https://badge.fury.io/js/ribbon-corner.svg)](https://david-dm.org/gaoliang/ribbon-corner.svg)
+
 ## Screenshot
 ![screenshot](https://raw.githubusercontent.com/gaoliang/ribbon-corner/main/docs/screenshot.jpg)
 
