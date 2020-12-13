@@ -31,7 +31,7 @@
       element.style.backgroundColor = options.backgroundColor;
       element.style.color = options.textColor;
       element.style.fontSize = options.fontSize + 'px';
-      element.style.fontFamily = '"PingFang SC",Helvetica Neue","Helvetica","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","WenQuanYi Micro Hei","Arial",sans-serif';
+      element.style.fontFamily = '"PingFang SC","Helvetica Neue","Helvetica","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","WenQuanYi Micro Hei","Arial",sans-serif';
       element.style.height = options.height + 'px';
       element.innerText = options.text;
       var toTop = options.toCorner / Math.sqrt(2) - options.height / 2;
