@@ -18,28 +18,28 @@ npm install ribbon-corner
 In browser:
 
 ```html
-<script src="/path/to/ribben-corner.js"></script>
+<script src="/path/to/ribbon-corner.js"></script>
 ```
 
-The [unpkg](https://unpkg.com/) provides CDN support for Ribben corner. You can find the links [here](http://unpkg.com/ribbon-corner).
+The [unpkg](https://unpkg.com/) provides CDN support for Ribbon corner. You can find the links [here](http://unpkg.com/ribbon-corner).
 
 ### Usage
 
 #### Syntax
 
 ```js
-import { ribbenCorner } from 'ribbon-corner'
-ribbenCorner(options)
+import { ribbonCorner } from 'ribbon-corner'
+ribbonCorner(options)
 ```
 
 - **options** (optional)
 ```javascript
     var defaultOptions = {
         backgroundColor: '#67C23A',
-        toCorner: 100, // the distance of ribben to cornor in px
-        height: 50, // height of ribben in px
+        toCorner: 100, // the distance of ribbon to cornor in px
+        height: 50, // height of ribbon in px
         horizontalAlign: 'left',
-        text: 'Ribben Corner',
+        text: 'Ribbon Corner',
         textColor: 'white',
         position: 'fixed', // fixed or absolute
         fontSize: 15,
@@ -51,14 +51,14 @@ ribbenCorner(options)
 
 Source code of screenshot
 ```javascript
-    ribbenCorner({
+    ribbonCorner({
         backgroundColor: '#67C23A',
         horizontalAlign: 'left',
         toCorner: 200,
         height: 120,
         text: 'At Left',
     });
-    ribbenCorner({
+    ribbonCorner({
         backgroundColor: '#E6A23C',
         horizontalAlign: 'right',
         text: 'At Right',

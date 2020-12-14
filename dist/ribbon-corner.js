@@ -8,20 +8,20 @@
      * @author gaoliang
      * @param {*} options: see defaults for detail
      */
-    function ribbenCorner(options) {
+    function ribbonCorner(options) {
       var defaults = {
         backgroundColor: '#67C23A',
         toCorner: 100,
         height: 50,
         horizontalAlign: 'left',
-        text: 'Ribben Corner',
+        text: 'Ribbon Corner',
         textColor: 'white',
         position: 'fixed',
         fontSize: 15
       };
       options = Object.assign({}, defaults, options);
       var element = document.createElement('div');
-      element.className = 'ribben-corner';
+      element.className = 'ribbon-corner';
       element.style.zIndex = 10000;
       element.style.display = 'flex';
       element.style.justifyContent = 'center';
@@ -51,7 +51,7 @@
       document.body.appendChild(element);
     }
 
-    exports.ribbenCorner = ribbenCorner;
+    exports.ribbonCorner = ribbonCorner;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
