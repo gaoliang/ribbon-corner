@@ -43,6 +43,7 @@ function ribbonCorner(options) {
   }
 
   document.body.appendChild(element);
+  return element;
 }
 
 export { ribbonCorner };

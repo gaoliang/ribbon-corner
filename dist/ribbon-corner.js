@@ -49,6 +49,7 @@
       }
 
       document.body.appendChild(element);
+      return element;
     }
 
     exports.ribbonCorner = ribbonCorner;

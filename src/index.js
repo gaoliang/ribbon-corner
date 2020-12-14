@@ -45,5 +45,7 @@ export function ribbonCorner(options) {
         element.style.right = offset + 'px'
     }
     document.body.appendChild(element)
+
+    return element;
 }
 
