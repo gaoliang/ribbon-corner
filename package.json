@@ -1,6 +1,6 @@
 {
   "name": "ribbon-corner",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Add a ribbon in the corner of your website.",
   "main": "dist/ribbon-corner.min.js",
   "module": "dist/ribbon-corner.esm.js",

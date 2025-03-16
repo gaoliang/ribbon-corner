@@ -8,6 +8,7 @@ export function ribbonCorner(options) {
         toCorner: 100,
         height: 50,
         horizontalAlign: 'left',
+        verticalAlign: 'top',    // 新增垂直方向选项
         text: 'Ribbon Corner',
         textColor: 'white',
         position: 'fixed',
@@ -35,14 +36,26 @@ export function ribbonCorner(options) {
     let offset = (options.toCorner / Math.sqrt(2)) - width / 2
 
     element.style.width = width + 'px';
-    element.style.top = toTop + 'px';
 
-    if (options.horizontalAlign === 'left') {
-        element.style.transform = 'rotate(-45deg)'
-        element.style.left = offset + 'px'
+    // 根据垂直方向调整位置和旋转角度
+    if (options.verticalAlign === 'top') {
+        element.style.top = toTop + 'px';
+        if (options.horizontalAlign === 'left') {
+            element.style.transform = 'rotate(-45deg)'
+            element.style.left = offset + 'px'
+        } else {
+            element.style.transform = 'rotate(45deg)'
+            element.style.right = offset + 'px'
+        }
     } else {
-        element.style.transform = 'rotate(45deg)'
-        element.style.right = offset + 'px'
+        element.style.bottom = toTop + 'px';
+        if (options.horizontalAlign === 'left') {
+            element.style.transform = 'rotate(45deg)'
+            element.style.left = offset + 'px'
+        } else {
+            element.style.transform = 'rotate(-45deg)'
+            element.style.right = offset + 'px'
+        }
     }
     document.body.appendChild(element)
 
