@@ -30,7 +30,6 @@ function ribbonCorner(options) {
   element.style.display = 'flex';
   element.style.flexDirection = 'column';
   element.style.justifyContent = 'flex-end';
-  element.style.gap = '10px';
   element.style.whiteSpace = 'nowrap'; // 防止文字换行
 
   element.style.overflow = 'hidden'; // 防止文字溢出
