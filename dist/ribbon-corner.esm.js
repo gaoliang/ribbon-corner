@@ -13,7 +13,9 @@ function ribbonCorner(options) {
     text: 'Ribbon Corner',
     textColor: 'white',
     position: 'fixed',
-    fontSize: 15
+    fontSize: 15,
+    hoverEffect: false // 控制是否启用hover效果
+
   };
   options = Object.assign({}, defaults, options);
   var element = document.createElement('div');
@@ -22,7 +24,14 @@ function ribbonCorner(options) {
   element.style.display = 'flex';
   element.style.justifyContent = 'center';
   element.style.alignItems = 'center';
-  element.style.transformOrigin = 'center';
+  element.style.transformOrigin = 'center'; // 添加以下样式确保文字完全居中
+
+  element.style.textAlign = 'center';
+  element.style.lineHeight = options.height + 'px';
+  element.style.whiteSpace = 'nowrap'; // 防止文字换行
+
+  element.style.overflow = 'hidden'; // 防止文字溢出
+
   element.style.position = options.position;
   element.style.backgroundColor = options.backgroundColor;
   element.style.color = options.textColor;
@@ -59,6 +68,6 @@ function ribbonCorner(options) {
 
   document.body.appendChild(element);
   return element;
-}
+} // 辅助函数：检测鼠标是否在元素内（考虑旋转）
 
 export { ribbonCorner };

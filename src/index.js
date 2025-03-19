@@ -13,6 +13,7 @@ export function ribbonCorner(options) {
         textColor: 'white',
         position: 'fixed',
         fontSize: 15,
+        hoverEffect: false // 控制是否启用hover效果
     };
 
     options = Object.assign({}, defaults, options);
@@ -23,6 +24,11 @@ export function ribbonCorner(options) {
     element.style.justifyContent = 'center';
     element.style.alignItems = 'center';
     element.style.transformOrigin = 'center';
+    // 添加以下样式确保文字完全居中
+    element.style.textAlign = 'center';
+    element.style.lineHeight = options.height + 'px';
+    element.style.whiteSpace = 'nowrap';  // 防止文字换行
+    element.style.overflow = 'hidden';     // 防止文字溢出
     element.style.position = options.position;
     element.style.backgroundColor = options.backgroundColor;
     element.style.color = options.textColor;
@@ -57,8 +63,36 @@ export function ribbonCorner(options) {
             element.style.right = offset + 'px'
         }
     }
-    document.body.appendChild(element)
-
+    document.body.appendChild(element);
     return element;
 }
 
+
+
+
+// 辅助函数：检测鼠标是否在元素内（考虑旋转）
+function isMouseInElement(mouseX, mouseY, element) {
+    const rect = element.getBoundingClientRect();
+    const style = getComputedStyle(element);
+    const transform = style.transform;
+
+    // 元素中心坐标
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    // 转换为相对于中心的坐标
+    let x = mouseX - centerX;
+    let y = mouseY - centerY;
+
+    if (transform !== 'none') {
+        // 解析变换矩阵
+        const matrix = new DOMMatrix(transform);
+        // 计算逆矩阵
+        const inverse = matrix.inverse();
+        // 应用逆变换到坐标
+        [x, y] = [inverse.a * x + inverse.c * y, inverse.b * x + inverse.d * y];
+    }
+
+    // 判断是否在原始矩形范围内
+    return Math.abs(x) <= rect.width / 2 && Math.abs(y) <= rect.height / 2;
+}

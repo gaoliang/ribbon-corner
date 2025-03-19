@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <button style="font-size: 1000px; background-color: gray;">hello world</button>
     <script src="../dist/ribbon-corner.js"></script>
     <script>
         RibbonCorner.ribbonCorner({
@@ -21,15 +22,21 @@
             toCorner: 200,
             height: 120,
             text: 'At Left',
-            verticalAlign: "bottom"
+            verticalAlign: "bottom",
+            position: 'fixed',
+            fontSize: 14,
         });
     
 
         RibbonCorner.ribbonCorner({
             backgroundColor: '#E6A23C',
             horizontalAlign: 'right',
+            toCorner: 40,
             text: 'At Right ⚠️ ',
-            verticalAlign: "bottom"
+            verticalAlign: "bottom",
+
+            position: 'fixed',
+            fontSize: 14
         });
     </script>
 </body>
