@@ -33,7 +33,10 @@
       element.style.transformOrigin = 'center'; // 添加以下样式确保文字完全居中
 
       element.style.textAlign = 'center';
-      element.style.lineHeight = options.height + 'px';
+      element.style.display = 'flex';
+      element.style.flexDirection = 'column';
+      element.style.justifyContent = 'flex-end';
+      element.style.gap = '10px';
       element.style.whiteSpace = 'nowrap'; // 防止文字换行
 
       element.style.overflow = 'hidden'; // 防止文字溢出
@@ -61,6 +64,7 @@
           element.style.right = offset + 'px';
         }
       } else {
+        element.style.justifyContent = 'flex-start';
         element.style.bottom = toTop + 'px';
 
         if (options.horizontalAlign === 'left') {
